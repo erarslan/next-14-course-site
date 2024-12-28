@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-purple text-white;
+  }
+}
+
+@layer components {
+  @media (max-width: 768px) {
+    .mobile-navbar {
+      @apply !flex flex-col bg-purple justify-center items-center gap-2.5 absolute top-[100px] right-0 w-1/2 h-[calc(100vh-100px)];
+    }
+  }
+
+  .button {
+    @apply p-3 min-w-[120px] rounded;
+  }
+
+  .form input,
+  .form textarea {
+    @apply p-5 rounded-3xl bg-purple-soft text-white;
+  }
+
+  .mini-card {
+    @apply flex flex-col gap-2.5;
+  }
+}
+
+@layer utilities {
+  @media (max-width: 1400px) {
+    .b-container {
+      @apply w-[1250px];
+    }
+  }
+
+  @media (max-width: 1250px) {
+    .b-container {
+      @apply w-[1000px];
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .b-container {
+      @apply w-[750px];
+    }
+  }
+
+  @media (max-width: 750px) {
+    .b-container {
+      @apply w-[600px] px-5;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .b-container {
+      @apply w-[450px];
+    }
+  }
+
+  @media (max-width: 450) {
+    .b-container {
+      @apply w-[340px];
+    }
+  }
+}
